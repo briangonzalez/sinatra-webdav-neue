@@ -7,7 +7,7 @@ A Sinatra-based webdav server powered by rack_dav.
 Fire up a terminal and:
 
 ```bash
-$ git clone 
+$ git clone git@github.com:briangonzalez/sinatra-webdav-neue.git  
 $ bundle install
 $ bundle exec thin start -R config.ru -p 9000
 ```
