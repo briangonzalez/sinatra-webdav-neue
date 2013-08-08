@@ -15,7 +15,7 @@ $ bundle exec thin start -R config.ru -p 9000
 You now have a webdav server running on port 9000 of your machine.
 
 
-### Putting behind nginx
+### Running behind nginx
 
 You'll first off need to install the nginx and the [nginx-dav-ext-module](https://github.com/arut/nginx-dav-ext-module) module on your server, as well as [passenger](https://www.phusionpassenger.com/). A typical nginx server block might look like so:
 
