@@ -16,7 +16,25 @@ You now have a webdav server running on port 9000 of your machine.
 
 
 ### Putting behind nginx
-See [docs on installing passenger with nginx](http://www.modrails.com/documentation/Users%20guide%20Nginx.html) to power your webdav install.
+
+You'll first off need to install the [nginx-dav-ext-module](https://github.com/arut/nginx-dav-ext-module). A typical nginx server block might look like so:
+
+```nginx
+server {
+  listen 80;
+  server_name cloud.myserver.com;
+
+  root /srv/www/sinatra-webdav-neue/current/public;
+
+  access_log /srv/www/sinatra-webdav-neue/logs/access.log;
+  error_log /srv/www/sinatra-webdav-neue/logs/error.log;
+
+  passenger_enabled on;
+  rails_env production;
+}
+```
+
+Also see [docs on installing passenger with nginx](http://www.modrails.com/documentation/Users%20guide%20Nginx.html) to power your webdav install.
 
 ### Contact
 Find me on twitter [@brianmgonzalez](http://twitter.com/brianmgonzalez).
